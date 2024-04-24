@@ -1,185 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+  --fontRedHat: 'Red Hat Display', sans-serif;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Your preferred font', sans-serif;
-    background-color:  hsl(225, 100%, 94%);
-    background-image: url('images/pattern-background-desktop.svg');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center 12%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 10px; 
-  }
-  
- 
+body {
+  background-color: var(--paleBlue);
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: var(--fontRedHat);
+}
 
-  .container {
-    width: 450px;
-    background-color: #FFF;
-    border-radius: 15px;
-    overflow: hidden;
-    
-    display: flex;
-    flex-direction: column;
-    position: relative; 
-    
-  }
-  
- 
-  
-  .compon {
-    padding: 0px;
-    background-color: white;
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+main {
+  background-color: #FFF;
+  min-width: 290px;
+  max-width: 335px;
+  width: 95vw;
+  border-radius: 20px;
+}
 
-  .compon svg {
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 0px;
-    
-    border-bottom-left-radius: 0px;
-    max-width: 100%;
-    max-height: 100%; 
-    box-sizing: border-box; 
-  }
-  
+main img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
 
- 
-  .content {
-    padding: 20px;
-  }
-  
-  .pay-btn {
-    /* Stylizacja guzika Learning */
-    background-color:  hsl(245, 75%, 52%); /* Przykład */
-    color: white; /* Przykład */
-    border: 0;
-    border-radius: 10px; /* Zaokrąglenie guzika */
-    padding: 5px 12px; /* Przykład */
-    font-weight: bold;
-    width: 80%;
-    height:50px;
-    margin-bottom: 25px; /* Odstęp od tekstu poniżej */
-    margin-left:10%;
-  }
-  .cancel-btn{
-    padding:15px;
-    border: none;
-    outline:none;
-    color:hsl(245, 75%, 52%);
-    font-size: 14px;;
-    width: 140px;
-    background-color:transparent;
-    border-radius: 25px;
-    margin-left: 125px;
-    margin-bottom:60px;
-  }
-  
-  .published, .author {
-    /* Stylizacja dla pozostałych elementów tekstu */
-    color: black;
-    font-size: 14px;
-  }
-  
-  .title {
-    /* Stylizacja tytułu */
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-    text-align: center;
-    
-  }
-  
-  .description {
-    /* Stylizacja opisu */
-    font-size: 16px;
-    line-height: 1.5;
-    color:gray;
-    margin-left:40px;
-    margin-bottom: 40px; 
-    text-align: center;
-  }
-  
-  .author {
-    display: flex;
-    align-items: center; /* Wyrównaj tekst i obrazek avatara w poziomie */
-    font-size: 14px; /* przykładowa wielkość czcionki dla autora */
-    color: black; /* kolor tekstu */
-    margin-top: auto; /* Jeżeli chcesz mieć tekst na dole kontenera */
-    margin-bottom: 10px; /* Odstęp od dolnej krawędzi kontenera */
-    gap: 12px;
-  }
+main div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
 
-  .avatar {
-    width: 35px; /* Dostosuj szerokość avatara */
-    height: 35px; /* Dostosuj wysokość avatara */
-    border-radius: 50%;
-  }
+main div.container div.principal {
+  text-align: center;
+}
 
-  .plan-container {
-    
-    display: flex;
-    align-items: center;
-    width:75%;
+main div.container div.principal h1 {
+  color: var(--darkBlue);
+  font-weight: 900;
+}
 
-    /* justify-content: space-between; */
-    padding: 20px;
-    background-color: hsla(225, 57%, 97%, 0.837); /* Replace with your preferred color */
-    border-radius: 15px;
-    margin-left:12%;
-  }
-  
-  .plan {
-    display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
-  background-color: hsl(225, 100%, 98%); /* Adjust the color to match your design */
+main div.container div.principal p {
+  color: var(--desaturatedBlue);
+}
+
+main div.container div.plan {
+  background: var(--veryPaleBlue);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60px 1fr 70px;
+      grid-template-columns: 60px 1fr 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
   border-radius: 10px;
-  margin: 15px 0;
+}
+
+main div.container div.plan img {
+  width: 40px;
+}
+
+main div.container div.plan div {
+  padding-right: 1rem;
+  width: 110px;
+}
+
+main div.container div.plan div h4 {
+  color: var(--darkBlue);
+  padding-bottom: 5px;
+}
+
+main div.container div.plan div p {
+  color: var(--desaturatedBlue);
+}
+
+main div.container div.plan a {
+  color: var(--brightBlue);
+  font-weight: 700;
+  font-size: 14px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main div.container div.plan a:hover {
+  opacity: 60%;
+  text-decoration: none;
+}
+
+main div.container button {
+  font-weight: 900;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main div.container button.pay {
+  background: var(--brightBlue);
+  color: #FFF;
+  -webkit-box-shadow: 0px 18px 5px #f0f0ff;
+          box-shadow: 0px 18px 5px #f0f0ff;
+}
+
+main div.container button.pay:hover {
+  opacity: 60%;
+}
+
+main div.container button.cancel {
+  background: none;
+  color: var(--desaturatedBlue);
+}
+
+main div.container button.cancel:hover {
+  color: var(--darkBlue);
+}
+
+footer {
+  padding: 1rem;
+}
+
+footer div.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+
+footer div.attribution a {
+  color: #3e52a3;
+  text-decoration: none;
+}
+
+@media (min-width: 376px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
   }
-  
-  .plan-icon {
-    width: 48px; /* Adjust size as necessary */
-    height: 48px; /* Adjust size as necessary */
-    margin-left: 0px;
+  main {
+    min-width: 376px;
+    max-width: 400px;
+    margin: 1.5rem;
   }
-  
-  .plan-details {
-    display: flex;
-    gap: 10px; /* Adjust spacing between the title and the price as needed */
+  main div.container {
+    padding: 2rem;
   }
-  
-  .plan-title {
-    font-size: 18px; /* Adjust size as necessary */
-    color: #3D3D3D; /* Replace with your preferred color */
-    margin: 0;
-    font-weight:bold;
+  main div div.principal {
+    padding: 0rem 1.5rem;
   }
-  
-  .plan-price {
-    font-size: 16px; /* Adjust size as necessary */
-    color: #3D3D3D; /* Replace with your preferred color */
-    margin: 0;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  main div.container button.pay {
+    -webkit-box-shadow: 0px 0px 0px #FFF;
+            box-shadow: 0px 0px 0px #FFF;
   }
-  
-  .plan-change {
-    margin-left:auto;
-    font-size: 14px; /* Adjust size as necessary */
-    color: #4B6AFC; /* Replace with your preferred color */
-    
-    font-weight: bold;
-  }
-  
+}
